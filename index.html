@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <h1>Calculadora</h1>
+    </header>
+    
+<section>
+    <div id="resultado">
+        Resultado
+    </div>
+
+    <table>
+        
+        <tr>
+            <td id="">
+    
+                <input type="button" value="C" id="limpar" style="width: 172px; height: 80px; margin: 3px;" onclick="limpar()">   
+    
+                <input type="button" value="&#247;" id="dividir" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="dividir()">
+    
+                <input type="button" value="&#215;" id="multiplicar" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="multiplicar()">
+    
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                
+                <input type="button" value="7" id="sete" style="width: 80px; height: 80px; margin: 3px;"> 
+            
+                <input type="button" value="8" id="oito" style="width: 80px; height: 80px; margin: 3px;">
+           
+                <input type="button" value="9" id="nove" style="width: 80px; height: 80px; margin: 3px;">
+    
+                <input type="button" value="&#8722;" id="subtracao" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="subtracao()">
+            </td> 
+    
+        </tr>
+            
+        <tr>
+            <td>
+                <input type="button" value="4" id="quatro" style="width: 80px; height: 80px; margin: 3px;">
+           
+                <input type="button" value="5" id="cinco" style="width: 80px; height: 80px; margin: 3px;">
+            
+                <input type="button" value="6" id="seis" style="width: 80px; height: 80px; margin: 3px;">
+    
+                <input type="button" value="&#43;" id="soma" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="soma()" >          
+                
+            </td>
+        </tr>
+        
+            <tr>
+                <td>
+                    <input type="button" value="1" id="um" style="width: 80px; height: 80px; margin: 3px;">
+                
+                    <input type="button" value="2" id="dois" style="width: 80px; height: 80px; margin: 3px;">
+                
+                    <input type="button" value="3" id="tres" style="width: 80px; height: 80px; margin: 3px; padding: 0px;">   
+                                        
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <input type="button" value="0" id="zero" style="width: 172.5px; height: 80px; margin: 3px;">
+                
+                    <input type="button" value="," id="virgula" style="width: 80px; height: 80px; margin: 3px;"> 
+
+                    
+
+                </td>
+            </tr>
+    
+        
+        </table>
+</section>
+
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
