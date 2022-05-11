@@ -14,78 +14,51 @@
     </header>
     
 <section>
-    <div id="resultado">
-        Resultado
+    <div id="resultado">        
+        
     </div>
-
+    
     <table>
-        
+
         <tr>
-            <td id="">
-    
-                <input type="button" value="C" id="limpar" style="width: 172px; height: 80px; margin: 3px;" onclick="limpar()">   
-    
-                <input type="button" value="&#247;" id="dividir" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="dividir()">
-    
-                <input type="button" value="&#215;" id="multiplicar" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="multiplicar()">
-    
-            </td>
-        </tr>
-    
-        <tr>
-            <td>
-                
-                <input type="button" value="7" id="sete" style="width: 80px; height: 80px; margin: 3px;"> 
             
-                <input type="button" value="8" id="oito" style="width: 80px; height: 80px; margin: 3px;">
-           
-                <input type="button" value="9" id="nove" style="width: 80px; height: 80px; margin: 3px;">
-    
-                <input type="button" value="&#8722;" id="subtracao" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="subtracao()">
-            </td> 
-    
-        </tr>
-            
-        <tr>
-            <td>
-                <input type="button" value="4" id="quatro" style="width: 80px; height: 80px; margin: 3px;">
-           
-                <input type="button" value="5" id="cinco" style="width: 80px; height: 80px; margin: 3px;">
-            
-                <input type="button" value="6" id="seis" style="width: 80px; height: 80px; margin: 3px;">
-    
-                <input type="button" value="&#43;" id="soma" min="0" style="width: 80px; height: 80px; margin: 3px;" onclick="soma()" >          
-                
-            </td>
         </tr>
         
-            <tr>
-                <td>
-                    <input type="button" value="1" id="um" style="width: 80px; height: 80px; margin: 3px;">
-                
-                    <input type="button" value="2" id="dois" style="width: 80px; height: 80px; margin: 3px;">
-                
-                    <input type="button" value="3" id="tres" style="width: 80px; height: 80px; margin: 3px; padding: 0px;">   
-                                        
-                </td>
-            </tr>
-    
-            <tr>
-                <td>
-                    <input type="button" value="0" id="zero" style="width: 172.5px; height: 80px; margin: 3px;">
-                
-                    <input type="button" value="," id="virgula" style="width: 80px; height: 80px; margin: 3px;"> 
+        <tr>
+            <td colspan="2"><input class="botao1" type="button" value="C" style="width:169px;" onclick="limpar()"></td>
+            <td><input class="botao"type="button" value="&#247;" onclick="insert('/')"></td>
+            <td><input class="botao" type="button" value="&#215;" onclick="insert('*')">      
+        </tr>
+        <tr>
+            <td><input class="botao" type="button" value="7" onclick="insert('7')"></td>
+            <td><input class="botao" type="button" value="8" onclick="insert('8')"></td>
+            <td><input class="botao" type="button" value="9" onclick="insert('9')"></td>
+            <td><input class="botao" type="button" value="&#8722;" onclick="insert('-')"></td>
+        </tr>
+        <tr>
+            <td><input class="botao" type="button" value="4" onclick="insert('4')"></td>
+            <td><input class="botao" type="button" value="5" onclick="insert('5')"></td>
+            <td><input class="botao" type="button" value="6" onclick="insert('6')"></td>
+            <td><input class="botao" type="button" value="&#43;" onclick="insert('+')"></td>
+        </tr>
+        <tr>
+            <td><input class="botao" type="button" value="1" onclick="insert('1')"></td>
+            <td><input class="botao" type="button" value="2" onclick="insert('2')"></td>
+            <td><input class="botao" type="button" value="3" onclick="insert('3')"></td>
+            <td rowspan="2"><input class="botao1" type="button" value="&#61;"style="height:166px;"onclick="calcular()"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input class="botao" type="button" value="0" style="width:169px;"onclick="insert('0')"></td>
+            <td><input class="botao" type="button" value="," onclick="insert('.')"></td>
+        </tr>        
+    </table> 
+</section>    
 
-                    
+<footer>
+    <input class="botaomusic"type="button" value="♫">
+    <span class="copy">&copy; Felipe Honorato</span>
+</footer>
 
-                </td>
-            </tr>
-    
-        
-        </table>
-</section>
-
-    
     <script src="scripts.js"></script>
 </body>
 </html>

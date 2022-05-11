@@ -1,37 +1,103 @@
-body {
-    background: rgb(70, 142, 236);
-    font: normal 15pt Arial;
-    display: grid;
-    place-items: center;
+@font-face {
+    font-family: 'digital-7' ;
+    src: url(./fonts/digital-7.ttf);
 }
 
+body {
+    background: #EDF2F4;
+    display: grid;
+    place-items: center;
+    font-family: 'digital-7', sans-serif;
+}
+
+
 header {
-    color: white;
+    color: #14213d;
+    font-size: 35px;
     text-align: center;
 }
 
 section {
-    background: white;
+    background: #001427;
+    text-align: center;
     border-radius: 10px;
-    width: 450px;
-    margin: auto;
-    height: 550px;
+    padding: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
 }
 
 div#resultado{
-    background-color: rgb(141, 139, 139);
-    text-align: left;
-    margin: 28px;
+    background-color: #83b692;
+    text-align: right;
+    padding: 20px;
+    font-size: 45px;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
     height: 50px;
+    margin-bottom: 30px;
     border: 2px #000 solid;
+}
+
+table{
+    text-align: center;
+    margin: auto;
+    padding: auto;    
+}
+
+.botao{
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 25px;
+    color: #EDF2F4;
+    background-color: #8D99AE;
+    border-color: solid #001427;
+}
+
+.botao1{
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: none;
+    text-align: center;
+    border-radius: 25px;
+    color: #EDF2F4;
+    background-color: #D90429
+}
+
+.botaomusic{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    color: #EDF2F4;
+    background-color: #D90429
     
 }
 
+.botao:hover{
+    background-color: #EDF2F4;
+    color: #2B2D42 ;
+
+}
+
+.botao1:hover{
+    background-color: #EDF2F4;
+    color: #2B2D42 ;
+}
+
+.botaomusic:hover{
+    background-color: #2B2D42;
+    color: #EDF2F4 ;
+}
+
 footer {
-    color: white;
+    margin-top: 10px;
+    color: #2B2D42;
+    font-size: 25px;
     text-align: vertical;
     font-style: italic;
 }
