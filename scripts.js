@@ -1,18 +1,18 @@
 //Fazer a inserção de vários números em sequência.
 function insert(num){
-    var numero = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = numero + num;
+    var numero = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = numero + num
 }
 
 //Limpar toda a tela de calculo.
 function limpar(){
-    document.getElementById('resultado').innerHTML = "";
+    document.getElementById('resultado').innerHTML = ""
    
 }
 
 //Apaga o ultimo número ou operadora inserido na tela.
 function apagar(){
-    var resultado = document.getElementById('resultado').innerHTML;
+    let resultado = document.getElementById('resultado').innerHTML
     document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length-1)
 // o método substring vai retornar todo o valor dentro da string.
 // o método resultado.length-1 vai apagar o ultimo dado inserido.
@@ -20,98 +20,48 @@ function apagar(){
 
 //Realizar o calculo matématico de acordo com a função passada no parâmetro.
 function calcular(){
-    var resultado = document.getElementById('resultado').innerHTML;
-        if(resultado){
-            document.getElementById('resultado').innerHTML = eval(resultado);
+    var resultado = document.getElementById('resultado').innerHTML
+   
+        if(resultado){            
+            document.getElementById('resultado').innerHTML = eval(resultado)
+               
         }else{
             alert('Nada para calcular')
-        }        
-    
+        } 
 }
 
-//Keydown - Evento de clique do teclado
-/*
-document.addEventListener("keypress", function(e){
-
-    if(e.key === "1"){
-    var btn = document.getElementById('1')
-    btn.click()
-}
-    if(e.key === "2"){
-    var btn = document.getElementById('2')
-    btn.click()
-}
-    if(e.key === "3"){
-    var btn = document.getElementById('3')
-    btn.click()
-}
-    if(e.key === "4"){
-    var btn = document.getElementById('4')
-    btn.click()
-}
-    if(e.key === "5"){
-    var btn = document.getElementById('5')
-    btn.click()
-}  
-    if(e.key === "6"){
-    var btn = document.getElementById('6')
-    btn.click()
-}  
-
-    if(e.key === "7"){
-    var btn = document.getElementById('7')
-    btn.click()
-}  
-
-    if(e.key === "8"){
-    var btn = document.getElementById('8')
-    btn.click()
-}    
-    if(e.key === "9"){
-    var btn = document.getElementById('9')
-    btn.click()
-}  
-
-    if(e.key === "0"){
-    var btn = document.getElementById('0')
-    btn.click()
-}  
-
-    if(e.key === "+"){
-    var btn = document.getElementById('+')
-    btn.click()
-}  
-
-    if(e.key === "-"){
-    var btn = document.getElementById('-')
-    btn.click()
-}  
-
-    if(e.key === "*"){
-    var btn = document.getElementById('*')
-    btn.click()
-}  
-
-    if(e.key === "/"){
-    var btn = document.getElementById('/')
-    btn.click()
-}  
-
-
+const td = document.querySelector('input')
+td.addEventListener('click',function(){
+    const audio = document.querySelector('audio')
+    audio.currentTime = 0
+    audio.play()
 })
 
-if(e.key === "back"){
-    var btn = document.getElementById('back')
-    btn.click()
-}  
+const mapaTeclado = {
+    0: '0',
+    1: '1',
+    2: '2',
+    3: '3',
+    4: '4',
+    5: '5',
+    6: '6',
+    7: '7',
+    8: '8',
+    9: '9',
+    0: '0',
+    '+': '+',
+    '-': '-',
+    '*': '*',
+    '/': '/',
+    '=': 'igual',
+    enter: 'igual',
+    back: 'apagar',
+    C:'limpar'
 
-    if(e.key === "C"){
-    var btn = document.getElementById('C')
-    btn.click()
-}  
-
-
-let bip = window.document.getElementById('botaomusic')
-bip.addEventListener('click', cli) 
-
-*/
+}
+const mapearTeclado = (evento) => {
+    const tecla = evento.key
+    const teclaPermitida = () => Object.keys(mapaTeclado).indexOf(tecla) !== -1
+    if (teclaPermitida()) document.getElementById(mapaTeclado[tecla]).click()
+}
+document.addEventListener('keydown', mapearTeclado)

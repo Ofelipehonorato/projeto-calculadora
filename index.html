@@ -6,29 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
-    <i class="bi bi-backspace-fill"></i>
+    <audio src="./midia/Beep Short .mp3"></audio>
 </head>
-<body>
 
+<body>
     <header>
     <h1>Calculadora</h1>
-    
     </header>
-    
-<section>
-    <!--    <input class="botaomusic"type="button" value="♫"> -->
-    <div id="resultado">        
-        
-    </div>
-    <div >
 
-    <table>
-        
+<section>
+    <input class="botaomusic"type="button" value="♫">   
+    
+    <div id="resultado"> </div>
+ 
+<div>
+
+    <table>        
         <tr>
             <td><input class="botao2" type="button" id="C" value="C" onclick="limpar()"></td>
-            <td><input class="botao2"type="button"  id="back" value="Del" style="text-align: center;" onclick="apagar()"></td>
-            <td><input class="botao2"type="button"  id="/" value="&#247;" onclick="insert('/')"></td>
-            <td><input class="botao1" type="button" id="*" value="&#215;" onclick="insert('*')">      
+            <td><input class="botao2" type="button" id="back" value="Del" onclick="apagar()"></td>
+            <td><input class="botao2" type="button" id="/" value="&#247;" onclick="insert('/')"></td>
+            <td><input class="botao1" type="button" id="*" value="&#215;" onclick="insert('*')"></td>
         </tr>
         <tr>
             <td><input class="botao" type="button" id="7" value="7" onclick="insert('7')"></td>
