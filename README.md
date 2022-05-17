@@ -1,4 +1,2 @@
 # Projeto-calculadora
- Projeto web de uma calculadora
-
-<a href= https://ofelipehonorato.github.io/Projeto-calculadora/index.html>
+Projeto web de uma calculadora com HTML, CSS e Javascript
