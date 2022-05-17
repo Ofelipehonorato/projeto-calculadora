@@ -7,6 +7,7 @@ function insert(num){
 //Limpar toda a tela de calculo.
 function limpar(){
     document.getElementById('resultado').innerHTML = ""
+    
    
 }
 
@@ -29,39 +30,3 @@ function calcular(){
             alert('Nada para calcular')
         } 
 }
-
-const td = document.querySelector('input')
-td.addEventListener('click',function(){
-    const audio = document.querySelector('audio')
-    audio.currentTime = 0
-    audio.play()
-})
-
-const mapaTeclado = {
-    0: '0',
-    1: '1',
-    2: '2',
-    3: '3',
-    4: '4',
-    5: '5',
-    6: '6',
-    7: '7',
-    8: '8',
-    9: '9',
-    0: '0',
-    '+': '+',
-    '-': '-',
-    '*': '*',
-    '/': '/',
-    '=': 'igual',
-    enter: 'igual',
-    back: 'apagar',
-    C:'limpar'
-
-}
-const mapearTeclado = (evento) => {
-    const tecla = evento.key
-    const teclaPermitida = () => Object.keys(mapaTeclado).indexOf(tecla) !== -1
-    if (teclaPermitida()) document.getElementById(mapaTeclado[tecla]).click()
-}
-document.addEventListener('keydown', mapearTeclado)
